@@ -1,0 +1,64 @@
+@font-face {
+  font-family: rick_and_morty;
+  src: url(../../assets/MISFITS-font.ttf);
+}
+
+.card {
+  background-color: #f48d06cb;
+  border: solid #06d6a0;
+  font-family: rick_and_morty;
+  width: 25em;
+  height: 32em;
+  border-radius: 2em;
+  overflow: hidden;
+  margin: 2em;
+  position: relative;
+  box-shadow: 0 0 10px rgba(86, 82, 82, 0.8);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card::after {
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: 800;
+}
+
+.card img {
+  top: 50%;
+  transform: translateY(-55%);
+  z-index: 10000;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.card:hover img {
+  top: 0%;
+  transform: translateY(0%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.card h2 {
+  color: #370617;
+}
+
+.card button {
+  border: #06d6a0 solid;
+  border-radius: 0.5em;
+  margin: 0.5em;
+}
+
+.card button:hover {
+  background-color: #ffd60a;
+  border-radius: 0.5em;
+  margin: 0.5em;
+  cursor: pointer;
+}
