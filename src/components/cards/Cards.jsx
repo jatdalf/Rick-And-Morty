@@ -8,6 +8,7 @@ export default function Cards(props) {
     <div className={styles.container}>
       {characters.map((char) => (
         <Card
+          detailId={char.id}
           key={char.name}
           name={char.name}
           species={char.species}
