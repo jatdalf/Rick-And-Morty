@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
+import styles from "./detail.module.css"
 
-export default function Detail (){
+export default function Detail (props){
     const {detailId} = useParams ();
     const [character, setCharacter] = useState ({});
     const navigate = useNavigate();
@@ -18,6 +19,8 @@ export default function Detail (){
               }
            })
            .catch((err) => {
+
+
               window.alert('No hay personajes con ese ID');
            });
         return setCharacter({});
@@ -25,15 +28,21 @@ export default function Detail (){
 
     return (
         <div>
-            <div>
-                <h1>Name: {character.name}</h1>
-                <h4>Gender: {character.gender}</h4>
-                <h4>Origin: {character.origin?.name}</h4>
-                <h4>Species: {character.species}</h4>
+            <div className={styles.normal}>
+                <hr/>
+                <h1>{character.name}</h1>
+                <hr/>
+                <br/>
+                <ul >
+                    <li><h3>Gender: {character.gender}</h3></li><br/>
+                    <li><h3>Origin: {character.origin?.name}</h3></li><br/>
+                    <li><h3>Species: {character.species}</h3></li><br/>
+                </ul>
+                <img src={character.image} alt={character.name} />
             </div>
             <div>
                 <hr/>
-            <button onClick={BackToHome}>Home</button>
+            <button className={styles.HomeButton} onClick={BackToHome}>Home</button>
             </div>
         </div>
     );

@@ -1,0 +1,109 @@
+.aboutImg{
+  display: flex;
+  position: absolute;
+  left: 83%;
+  top: 35%;
+  width: 20%;
+  height: 43%;  
+}
+
+.AboutDiv {
+	border-radius: 100%;
+	border: 3px dashed rgb(236, 13, 13); 
+  color:transparent;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	animation: ease-in-out infinite tunnel 5s;  
+}
+
+@keyframes tunnel {
+	50% {
+		transform: translate(-50%, -50%) rotate(360deg) scale(1.5);
+	}
+}
+
+.title {
+    text-align: center;
+    font-family: 'Get Schwifty';
+    font-size: 6em;
+    color: #211df8;
+    z-index: 50;
+    -webkit-text-stroke: 1px rgba(0,0,0,0.5);  
+  }
+
+  @font-face {
+    font-family: 'Get Schwifty';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff') format('woff');
+  }
+  
+  .subtitle {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color:blue;
+  }
+
+  .blue{
+    color:WHITE;
+    font-weight: 700;    
+  }
+  
+  .unorderedList {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .listItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    height: 15vh;
+    background-color: #fcff4f;
+    padding: 1em;
+    margin: 5px;
+    font-weight: 500;
+    border-radius: 5%;
+  }
+  .listItem:hover {
+    background-color: #262623c9;
+    color: beige;
+  }
+  
+  .listItem img {
+    width: 50%;
+    object-fit: cover;
+    margin: 15px;
+  }
+
+  /* .sect {
+    width: 100%;
+    min-height: 500px;
+  }
+  #sect1,
+  #sect3 {
+    background-color: #3333337d;
+    color: #fff;
+  }
+  #sect2 {
+    background-color: #dddddd7d;
+    color: #333;
+  } */
+  
+  video {
+    position: fixed;
+    top: 50%;
+    left: 50%;    
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -100;
+    background-size: cover;
+  }

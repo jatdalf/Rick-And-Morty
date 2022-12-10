@@ -1,5 +1,4 @@
 import { useState } from "react";
-//import styles from "./SearchBar.css";
 import styled from "styled-components";
 
 const DivSearch = styled.div`
@@ -16,6 +15,9 @@ border: solid #06d6a0;
 color: #370617;
 font-weight: 700;
 font-size: 1em;
+background: linear-gradient(0deg, rgba(7, 241, 38, 0.795) 0%, rgb(182, 245, 9) 100%);
+width: 150px;
+height: 50px;
 &:hover {
   background-color: #ffd60a;
   cursor: pointer;
@@ -30,6 +32,7 @@ border: solid #06d6a0;
 color: #370617;
 font-weight: 700;
 font-size: 1em;
+background-color: white;
 &:hover {
   background-color: #ffd60a;
 }
@@ -47,8 +50,9 @@ export default function SearchBar(props) {
 
   return (
     <DivSearch >
-      <Input  type="search" value ={character} onChange={handleChange}/>
-      <Btn  onClick={() => onSearch(character)}>Agregar</Btn>
+      <Input  type="number" placeholder="Type char Id" value ={character} onChange={handleChange}/>
+      <Btn onClick={()=> onSearch(character)}>Add char</Btn>
+      <Btn onClick={()=> onSearch(Math.floor(Math.random()*826))}>Random Char</Btn>
     </DivSearch>    
   );
 }

@@ -3,12 +3,12 @@
   src: url(../../assets/MISFITS-font.ttf);
 }
 
-.card {
-  background-color: #f48d06cb;
+.card {  
+  background-color: #245e3ae8;
   border: solid #06d6a0;
   font-family: rick_and_morty;
   width: 18em;
-  height: 26em;
+  height: 23em;
   border-radius: 2em;
   overflow: hidden;
   margin: 2em;
@@ -33,7 +33,7 @@
 
 .card img {
   top: 50%;
-  transform: translateY(-55%);
+  transform: translateY(-31%);
   z-index: 10000;
   width: 100%;
   transition: 0.5s;
@@ -47,7 +47,7 @@
 }
 
 .card h2 {
-  color: #370617;
+  color: white;
 }
 
 .card button {
